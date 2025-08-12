@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volleyball Home Sign-up 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .form-container {
+            padding: 30px;
+        }
+
+        .volunteer-info {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .volunteer-info h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .info-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .info-item strong {
+            color: #4CAF50;
+        }
+
+        .game-section {
+            margin-bottom: 30px;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .game-section:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .game-header {
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            color: white;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .positions-grid {
+            padding: 20px;
+            display: grid;
+            gap: 15px;
+        }
+
+        .position-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .position-item:hover {
+            background: #e8f5e8;
+            border-color: #4CAF50;
+        }
+
+        .position-info {
+            flex: 1;
+            margin-right: 15px;
+        }
+
+        .position-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .position-time {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .volunteer-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 200px;
+        }
+
+        .volunteer-name {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            width: 150px;
+            background: white;
+        }
+
+        .volunteer-name:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
+        }
+
+        .volunteer-name::placeholder {
+            color: #999;
+        }
+
+        .position-status {
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .status-available {
+            background: #e8f5e8;
+            color: #2e7d32;
+        }
+
+        .status-filled {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .admin-section {
+            background: #f0f7ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            border-left: 4px solid #2196F3;
+        }
+
+        .admin-section h3 {
+            color: #1976D2;
+            margin-bottom: 15px;
+        }
+
+        .export-btn {
+            background: #2196F3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .export-btn:hover {
+            background: #1976D2;
+        }
+
+        @media (max-width: 768px) {
+            .position-item {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+            
+            .position-info {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .volunteer-section {
+                justify-content: center;
+                min-width: auto;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏐 Volleyball Home Sign-up 2025</h1>
+            <p>Sign up to volunteer at home games - Enter your name to claim a position!</p>
+        </div>
+
+        <div class="form-container">
+            <div class="volunteer-info">
+                <h3>🌟 Volunteer Position Information</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>Grill:</strong> Manage food service and grilling operations
+                    </div>
+                    <div class="info-item">
+                        <strong>JV Concessions:</strong> Handle concession stand during JV games
+                    </div>
+                    <div class="info-item">
+                        <strong>Varsity Line Judge:</strong> Official line judge for varsity matches
+                    </div>
+                    <div class="info-item">
+                        <strong>Varsity Concessions:</strong> Manage concessions during varsity games
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-section">
+                <div class="game-header">
+                    📅 Tuesday, 8/19/25 - Hampshire
+                </div>
+                <div class="positions-grid">
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Grill</div>
+                            <div class="position-time">4:00 pm - 5:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="8/19 Hampshire - Grill">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Line Judge 1</div>
+                            <div class="position-time">5:00 pm - Match End</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="8/19 Hampshire - Varsity Line Judge 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Line Judge 2</div>
+                            <div class="position-time">5:00 pm - Match End</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="8/19 Hampshire - Varsity Line Judge 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Concessions 1</div>
+                            <div class="position-time">4:15 pm - 5:30 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="8/19 Hampshire - Varsity Concessions 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Concessions 2</div>
+                            <div class="position-time">4:15 pm - 5:30 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="8/19 Hampshire - Varsity Concessions 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-section">
+                <div class="game-header">
+                    📅 Tuesday, 8/26/25 - Mt. Pleasant
+                </div>
+                <div class="positions-grid">
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Grill</div>
+                            <div class="position-time">4:00 pm - 6:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="8/26 Mt. Pleasant - Grill">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">JV Concessions 1</div>
+                            <div class="position-time">4:15 pm - 6:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="8/26 Mt. Pleasant - JV Concessions 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">JV Concessions 2</div>
+                            <div class="position-time">4:15 pm - 6:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="8/26 Mt. Pleasant - JV Concessions 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Line Judge 1</div>
+                            <div class="position-time">6:00 pm - Match End</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="8/26 Mt. Pleasant - Varsity Line Judge 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Line Judge 2</div>
+                            <div class="position-time">6:00 pm - Match End</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="8/26 Mt. Pleasant - Varsity Line Judge 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Concessions 1</div>
+                            <div class="position-time">6:00 pm - Match End + cleanup</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="8/26 Mt. Pleasant - Varsity Concessions 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Concessions 2</div>
+                            <div class="position-time">6:00 pm - Match End + cleanup</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="8/26 Mt. Pleasant - Varsity Concessions 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-section">
+                <div class="game-header">
+                    📅 Tuesday, 9/2/25 - Collinwood
+                </div>
+                <div class="positions-grid">
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Grill</div>
+                            <div class="position-time">4:00 pm - 6:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/2 Collinwood - Grill">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">JV Concessions 1</div>
+                            <div class="position-time">4:15 pm - 6:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/2 Collinwood - JV Concessions 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">JV Concessions 2</div>
+                            <div class="position-time">4:15 pm - 6:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/2 Collinwood - JV Concessions 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Line Judge 1</div>
+                            <div class="position-time">6:00 pm - Match End</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/2 Collinwood - Varsity Line Judge 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Line Judge 2</div>
+                            <div class="position-time">6:00 pm - Match End</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/2 Collinwood - Varsity Line Judge 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Concessions 1</div>
+                            <div class="position-time">6:00 pm - Match End + cleanup</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/2 Collinwood - Varsity Concessions 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Concessions 2</div>
+                            <div class="position-time">6:00 pm - Match End + cleanup</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/2 Collinwood - Varsity Concessions 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-section">
+                <div class="game-header">
+                    📅 Tuesday, 9/9/25 - Perry County (Doubleheader)
+                </div>
+                <div class="positions-grid">
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Grill</div>
+                            <div class="position-time">4:00 pm - 6:30 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/9 Perry County - Grill">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">JV Concessions 1</div>
+                            <div class="position-time">4:15 pm - 6:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/9 Perry County - JV Concessions 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">JV Concessions 2</div>
+                            <div class="position-time">4:15 pm - 6:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/9 Perry County - JV Concessions 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Match 1 Line Judge 1</div>
+                            <div class="position-time">6:00 pm - Match End</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/9 Perry County - Match 1 Line Judge 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Match 1 Line Judge 2</div>
+                            <div class="position-time">6:00 pm - Match End</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/9 Perry County - Match 1 Line Judge 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Match 1 Concessions 1</div>
+                            <div class="position-time">6:00 pm - 7:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/9 Perry County - Match 1 Concessions 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Match 1 Concessions 2</div>
+                            <div class="position-time">6:00 pm - 7:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/9 Perry County - Match 1 Concessions 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Match 2 Line Judge 1</div>
+                            <div class="position-time">7:00 pm - Match End</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/9 Perry County - Match 2 Line Judge 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Match 2 Line Judge 2</div>
+                            <div class="position-time">7:00 pm - Match End</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/9 Perry County - Match 2 Line Judge 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Match 2 Concessions 1</div>
+                            <div class="position-time">7:00 pm - Match End</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/9 Perry County - Match 2 Concessions 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Match 2 Concessions 2</div>
+                            <div class="position-time">7:00 pm - Match End</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/9 Perry County - Match 2 Concessions 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-section">
+                <div class="game-header">
+                    📅 Monday, 9/15/25 - Lawrence County
+                </div>
+                <div class="positions-grid">
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Grill</div>
+                            <div class="position-time">4:00 pm - 6:30 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/15 Lawrence County - Grill">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">JV Concessions 1</div>
+                            <div class="position-time">4:15 pm - 6:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/15 Lawrence County - JV Concessions 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">JV Concessions 2</div>
+                            <div class="position-time">4:15 pm - 6:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/15 Lawrence County - JV Concessions 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Line Judge 1</div>
+                            <div class="position-time">6:00 pm - Match End</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/15 Lawrence County - Varsity Line Judge 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Line Judge 2</div>
+                            <div class="position-time">6:00 pm - Match End</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/15 Lawrence County - Varsity Line Judge 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Concessions 1</div>
+                            <div class="position-time">6:00 pm - Match End + cleanup</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/15 Lawrence County - Varsity Concessions 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Concessions 2</div>
+                            <div class="position-time">6:00 pm - Match End + cleanup</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/15 Lawrence County - Varsity Concessions 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-section">
+                <div class="game-header">
+                    📅 Tuesday, 9/23/25 - Summertown
+                </div>
+                <div class="positions-grid">
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Grill</div>
+                            <div class="position-time">4:00 pm - 6:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/23 Summertown - Grill">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">JV Concessions 1</div>
+                            <div class="position-time">4:15 pm - 6:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/23 Summertown - JV Concessions 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">JV Concessions 2</div>
+                            <div class="position-time">4:15 pm - 6:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/23 Summertown - JV Concessions 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Line Judge 1</div>
+                            <div class="position-time">6:00 pm - Match End</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/23 Summertown - Varsity Line Judge 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Line Judge 2</div>
+                            <div class="position-time">6:00 pm - Match End</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/23 Summertown - Varsity Line Judge 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Concessions 1</div>
+                            <div class="position-time">6:00 pm - Match End + cleanup</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/23 Summertown - Varsity Concessions 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Concessions 2</div>
+                            <div class="position-time">6:00 pm - Match End + cleanup</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/23 Summertown - Varsity Concessions 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-section">
+                <div class="game-header">
+                    📅 Tuesday, 9/30/25 - Lewis County (Senior Night)
+                </div>
+                <div class="positions-grid">
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Grill</div>
+                            <div class="position-time">4:00 pm - 6:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/30 Lewis County - Grill">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">JV Concessions 1</div>
+                            <div class="position-time">4:15 pm - 6:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/30 Lewis County - JV Concessions 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">JV Concessions 2</div>
+                            <div class="position-time">4:15 pm - 6:00 pm</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/30 Lewis County - JV Concessions 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Line Judge 1</div>
+                            <div class="position-time">6:30 pm - Match End</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/30 Lewis County - Varsity Line Judge 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Line Judge 2</div>
+                            <div class="position-time">6:30 pm - Match End</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/30 Lewis County - Varsity Line Judge 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Concessions 1</div>
+                            <div class="position-time">6:00 pm - Match End + cleanup</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/30 Lewis County - Varsity Concessions 1">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="position-info">
+                            <div class="position-title">Varsity Concessions 2</div>
+                            <div class="position-time">6:00 pm - Match End + cleanup</div>
+                        </div>
+                        <div class="volunteer-section">
+                            <input type="text" class="volunteer-name" placeholder="Your name" data-position="9/30 Lewis County - Varsity Concessions 2">
+                            <span class="position-status status-available">Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-section">
+                <h3>📊 For Organizers</h3>
+                <button class="export-btn" onclick="exportToCSV()">Export to CSV</button>
+                <button class="export-btn" onclick="printSignups()">Print Current Signups</button>
+                <button class="export-btn" onclick="clearAllSignups()">Clear All Names</button>
+                <p style="margin-top: 10px; font-size: 14px; color: #666;">
+                    Use these tools to manage the volunteer list and export data for your records.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Update position status when name is entered or cleared
+        document.addEventListener('DOMContentLoaded', function() {
+            const nameInputs = document.querySelectorAll('.volunteer-name');
+            
+            nameInputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    const statusSpan = this.parentElement.querySelector('.position-status');
+                    if (this.value.trim()) {
+                        statusSpan.textContent = this.value.trim();
+                        statusSpan.className = 'position-status status-filled';
+                    } else {
+                        statusSpan.textContent = 'Available';
+                        statusSpan.className = 'position-status status-available';
+                    }
+                });
+            });
+        });
+
+        // Export data to CSV
+        function exportToCSV() {
+            const nameInputs = document.querySelectorAll('.volunteer-name');
+            let csvContent = "Game,Position,Time,Volunteer Name\n";
+            
+            nameInputs.forEach(input => {
+                const position = input.getAttribute('data-position');
+                const name = input.value.trim() || 'Available';
+                const positionItem = input.closest('.position-item');
+                const time = positionItem.querySelector('.position-time').textContent;
+                
+                csvContent += `"${position}","${positionItem.querySelector('.position-title').textContent}","${time}","${name}"\n`;
+            });
+            
+            const blob = new Blob([csvContent], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.setAttribute('hidden', '');
+            a.setAttribute('href', url);
+            a.setAttribute('download', 'volleyball-volunteers-2025.csv');
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        // Print current signups
+        function printSignups() {
+            const nameInputs = document.querySelectorAll('.volunteer-name');
+            let printContent = '<h2>Volleyball Volunteer Sign-ups 2025</h2>';
+            
+            const games = document.querySelectorAll('.game-section');
+            games.forEach(game => {
+                const gameTitle = game.querySelector('.game-header').textContent;
+                printContent += `<h3>${gameTitle}</h3><ul>`;
+                
+                const positions = game.querySelectorAll('.position-item');
+                positions.forEach(position => {
+                    const title = position.querySelector('.position-title').textContent;
+                    const time = position.querySelector('.position-time').textContent;
+                    const name = position.querySelector('.volunteer-name').value.trim() || 'Available';
+                    printContent += `<li><strong>${title}</strong> (${time}): ${name}</li>`;
+                });
+                
+                printContent += '</ul>';
+            });
+            
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+                <html>
+                    <head><title>Volleyball Volunteers 2025</title></head>
+                    <body style="font-family: Arial, sans-serif; padding: 20px;">
+                        ${printContent}
+                    </body>
+                </html>
+            `);
+            printWindow.document.close();
+            printWindow.print();
+        }
+
+        // Clear all signups
+        function clearAllSignups() {
+            if (confirm('Are you sure you want to clear all volunteer names? This cannot be undone.')) {
+                const nameInputs = document.querySelectorAll('.volunteer-name');
+                nameInputs.forEach(input => {
+                    input.value = '';
+                    const statusSpan = input.parentElement.querySelector('.position-status');
+                    statusSpan.textContent = 'Available';
+                    statusSpan.className = 'position-status status-available';
+                });
+            }
+        }
+
+        // Auto-save to localStorage (if available)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load saved data
+            const nameInputs = document.querySelectorAll('.volunteer-name');
+            nameInputs.forEach(input => {
+                const savedValue = localStorage.getItem(input.getAttribute('data-position'));
+                if (savedValue) {
+                    input.value = savedValue;
+                    const statusSpan = input.parentElement.querySelector('.position-status');
+                    statusSpan.textContent = savedValue;
+                    statusSpan.className = 'position-status status-filled';
+                }
+            });
+
+            // Save on change
+            nameInputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    try {
+                        localStorage.setItem(this.getAttribute('data-position'), this.value);
+                    } catch(e) {
+                        // localStorage not available, continue without saving
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
