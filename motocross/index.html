@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Dirt Ridge MX</title>
+<meta name="description" content="Physics-based 3D motocross: race CPU riders or score freestyle tricks across six tracks.">
+<meta name="theme-color" content="#0d0f12">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="view"></canvas>
+
+<!-- HUD -->
+<div id="hud" class="hidden">
+  <div class="hud-tl">
+    <div id="hudPos" class="big">1<sup>st</sup><span>/4</span></div>
+    <div id="hudScore" class="big hidden">0</div>
+    <div id="hudSub" class="sub">0:00.0</div>
+    <div id="hudGaps"></div>
+  </div>
+  <div class="hud-tr">
+    <div class="speedo"><span id="hudSpeed">0</span><small>km/h</small></div>
+    <div class="gear">GEAR <b id="hudGear">1</b></div>
+    <div class="rpm"><div id="hudRpm"></div><i></i></div>
+    <div id="hudHint" class="hint-line"></div>
+  </div>
+  <div class="progress"><div class="track-line"></div><div id="progDots"></div></div>
+  <div id="trickFeed"></div>
+  <div id="bigMsg"></div>
+  <div id="comboLine"></div>
+  <button id="pauseBtn" class="icon-btn" aria-label="Pause">❚❚</button>
+</div>
+
+<!-- touch controls -->
+<div id="touch" class="hidden">
+  <div class="tc-left">
+    <button data-k="leanB" aria-label="Lean back">◀</button>
+    <button data-k="leanF" aria-label="Lean forward">▶</button>
+  </div>
+  <div class="tc-tricks">
+    <button data-k="t0">SUP</button><button data-k="t1">HEEL</button><button data-k="t2">NAC</button><button data-k="t3">CAN</button><button data-k="t4">CLIFF</button>
+  </div>
+  <div class="tc-right">
+    <button data-k="brake" aria-label="Brake">BRAKE</button>
+    <button data-k="gas" class="gas" aria-label="Throttle">GAS</button>
+  </div>
+</div>
+
+<!-- menus -->
+<div id="menu" class="screen">
+  <div class="menu-inner">
+    <header class="brand">
+      <div class="logo">DIRT<span>RIDGE</span><em>MX</em></div>
+      <p class="tag">Real suspension. Real throttle. Real consequences.</p>
+    </header>
+    <div id="levelGrid" class="levels"></div>
+    <div class="menu-actions">
+      <button id="btnControls" class="ghost">Controls</button>
+      <button id="btnSettings" class="ghost">Settings</button>
+    </div>
+  </div>
+</div>
+
+<div id="brief" class="screen hidden">
+  <div class="panel">
+    <div class="eyebrow" id="briefMode">RACE</div>
+    <h2 id="briefName">Level</h2>
+    <p id="briefText"></p>
+    <ul id="briefGoals" class="goals"></ul>
+    <div class="row">
+      <button id="briefBack" class="ghost">Back</button>
+      <button id="briefGo" class="primary">Ride</button>
+    </div>
+  </div>
+</div>
+
+<div id="pause" class="screen hidden">
+  <div class="panel">
+    <h2>Paused</h2>
+    <div class="col">
+      <button id="pResume" class="primary">Resume</button>
+      <button id="pRestart">Restart</button>
+      <button id="pControls">Controls</button>
+      <button id="pMenu" class="ghost">Quit to menu</button>
+    </div>
+  </div>
+</div>
+
+<div id="results" class="screen hidden">
+  <div class="panel wide">
+    <div class="eyebrow" id="resMode">RESULTS</div>
+    <h2 id="resTitle">Finished</h2>
+    <div id="resMedal" class="medal"></div>
+    <div id="resBody"></div>
+    <div class="row">
+      <button id="resMenu" class="ghost">Menu</button>
+      <button id="resRetry">Retry</button>
+      <button id="resNext" class="primary">Next track</button>
+    </div>
+  </div>
+</div>
+
+<div id="controls" class="screen hidden">
+  <div class="panel wide">
+    <h2>Controls</h2>
+    <div class="ctl-grid">
+      <div><kbd>↑</kbd> <kbd>W</kbd></div><div>Throttle (roll it on — too much in low gears and it wheelies)</div>
+      <div><kbd>↓</kbd> <kbd>S</kbd></div><div>Brakes</div>
+      <div><kbd>←</kbd> <kbd>A</kbd></div><div>Shift weight back / rotate backwards in the air</div>
+      <div><kbd>→</kbd> <kbd>D</kbd></div><div>Shift weight forward / rotate forwards in the air</div>
+      <div><kbd>1</kbd>–<kbd>5</kbd></div><div>Hold in the air: Superman, Heel Clicker, Nac-Nac, Can-Can, Cliffhanger. Let go before you land!</div>
+      <div><kbd>R</kbd></div><div>Reset to the last safe spot</div>
+      <div><kbd>Esc</kbd> <kbd>P</kbd></div><div>Pause</div>
+      <div>🎮</div><div>Gamepad: RT gas, LT brake, left stick lean, A/B/X/Y/RB tricks, Start pause</div>
+    </div>
+    <p class="hint">Real physics: gas in the air spins the rear wheel and lifts the nose; the brake drops it. Match the landing slope to keep your speed. Land flat from big air and you'll pay for it.</p>
+    <div class="row"><button id="ctlClose" class="primary">Got it</button></div>
+  </div>
+</div>
+
+<div id="settings" class="screen hidden">
+  <div class="panel">
+    <h2>Settings</h2>
+    <div class="col">
+      <label class="opt">Graphics
+        <select id="setQuality"><option value="high">High</option><option value="medium">Medium</option><option value="low">Low (faster)</option></select>
+      </label>
+      <label class="opt">Sound <input type="checkbox" id="setSound" checked></label>
+      <label class="opt">Touch controls
+        <select id="setTouch"><option value="auto">Auto</option><option value="on">On</option><option value="off">Off</option></select>
+      </label>
+      <button id="setUnlock" class="ghost">Unlock all tracks</button>
+      <button id="setReset" class="ghost danger">Reset progress</button>
+    </div>
+    <div class="row"><button id="setClose" class="primary">Done</button></div>
+  </div>
+</div>
+
+<div id="loading" class="screen hidden"><div class="spinner"></div><p>Building track…</p></div>
+<div id="err" class="hidden"></div>
+
+<script src="lib/three.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/physics.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/render.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
